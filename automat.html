@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spilleautomaten</title>
+    <style>
+        #bilde1{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 350px;
+        }
+        #bilde2{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 350px;
+        }
+        #bilde0{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 350px;
+        }
+        #esp{
+            
+            width: 300px;
+            height: 350px;
+        }
+       
+        .knapp{
+            margin-left: 450;
+        }
+        #vinn{
+            float: right;
+            font-size: x-large;
+            color: chartreuse;
+        }
+        body{
+            background-image: url("bakrunn.jpg");
+            background-size: cover;
+        }
+        #balance{
+            color: chartreuse;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="bilde0"></div>
+    <div id="bilde1"></div>
+    <div id="bilde2"></div><br/>
+    <h1 id="vinn"></h1>
+    <h1 id="balance"></h1>
+    
+    
+    
+
+    <script type="text/javascript">
+        var balante = 300;
+        document.getElementById("balance").innerHTML = balante;
+
+        function spin() {
+            document.getElementById("balance").innerHTML = balante -= 3;
+            document.getElementById("vinn").innerHTML =('')
+            var talls = [] 
+            for(var i = 0; i < 3; i++){
+                var tall = Math.floor(Math.random()*5);
+                talls.push(tall)
+                switch(tall) {
+                    case 0: document.getElementById("bilde"+i).innerHTML = '<img id="esp" src="espen.PNG" alt="bilde av espen">';   break;
+                    case 1: document.getElementById("bilde"+i).innerHTML = '<img id="esp" src="nala.PNG" alt="bilde av nala">';    break;
+                    case 2: document.getElementById("bilde"+i).innerHTML = '<img id="esp" src="gard.PNG" alt="bilde av gard">';    break;
+                    case 3: document.getElementById("bilde"+i).innerHTML = '<img id="esp" src="stian.PNG" alt="bilde av stian">';    break;
+                    case 4: document.getElementById("bilde"+i).innerHTML = '<img id="esp" src="kjell.PNG" alt="bilde av kjell">';
+                }
+
+
+            }
+            if(talls[0] === talls[1] && talls[1] === talls [2]){
+                document.getElementById("vinn").innerHTML =('Hurra! Du har vunnet 100 ditt jævla svin!')
+                document.getElementById("balance").innerHTML = balante += 100;
+            }
+        }
+        
+    </script>
+    <input class="knapp" type="button" value="Spin 2 win" onclick="spin();">
+
+    
+    
+</body>
+</html>
