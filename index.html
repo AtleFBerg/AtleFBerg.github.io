@@ -7,75 +7,66 @@
     <style>
         #bilde1{
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
+            margin-left: 3px;
+            margin-right: 3px;
         }
         #bilde2{
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
         }
         #bilde0{
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
         }
         #bilde3{
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
         }
         #bilde4{
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
+            margin-top: 3px;
+            margin-left: 3px;
+            margin-right: 3px;
+            margin-bottom: 3px;
         }
         #bilde5{
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
         }
         #bilde6{
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
         }
         #bilde7{
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
+            margin-left: 3px;
+            margin-right: 3px;
         }
         #bilde8{
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
         }
         #esp{
             
-            width: 200px;
-            height: 250px;
+            width: 275px;
+            height: 275px;
         }
        
         .knapp{
-            margin-left: 450;
+            margin-left: 50%;
+            margin-top: 20px;
         }
         #vinn{
             float: right;
@@ -88,10 +79,14 @@
         }
         #balance{
             color: chartreuse;
+            text-align: center;
         }
         .container{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
             margin: auto;
-            max-width: 50%;
+            max-width: 915px;
         }
 
 
@@ -108,6 +103,7 @@
         <div id="bilde6"></div>
         <div id="bilde7"></div>
         <div id="bilde8"></div><br/>
+        <input class="knapp" type="button" value="Spin 2 win" onclick="spin();">
     </div>
     <h1 id="vinn"></h1>
     <h1 id="balance"></h1>
@@ -160,7 +156,7 @@
         }
         
     </script>
-    <input class="knapp" type="button" value="Spin 2 win" onclick="spin();">
+    
 
     
     
